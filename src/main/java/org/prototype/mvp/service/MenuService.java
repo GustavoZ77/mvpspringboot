@@ -1,6 +1,5 @@
 package org.prototype.mvp.service;
 
-import java.util.Collections;
 import java.util.List;
 import org.prototype.mvp.domain.Menu;
 import org.prototype.mvp.repository.MenuRepository;
@@ -15,7 +14,6 @@ public class MenuService {
 	
 	public List<Menu> searchByCategory(String category){
 	
-
 		List<Menu> menus = menuRepository.findByCategory(category);
 		return menus;
 	}

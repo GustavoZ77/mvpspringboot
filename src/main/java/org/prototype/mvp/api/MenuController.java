@@ -14,13 +14,13 @@ import org.prototype.mvp.service.MenuService;
 @RestController
 @RequestMapping("api-menu")
 public class MenuController {
-	
+
 	@Autowired
 	private MenuService menuService;
-	
-	@GetMapping(value ="/{category}", produces = "application/json")
-	public List<Menu> getMenusBYCategory(@PathVariable String category){
-		if(category.isEmpty()) {
+
+	@GetMapping(value = "/{category}", produces = "application/json")
+	public List<Menu> getMenusBYCategory(@PathVariable String category) {
+		if (category.isEmpty()) {
 			category = "*";
 		}
 		return menuService.searchByCategory(category);
