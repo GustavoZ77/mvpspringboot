@@ -2,6 +2,7 @@ package org.prototype.mvp.domain;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -16,7 +17,7 @@ public class Menu {
 	private long id;
 	@OneToMany
 	public List<Product> products;
-	@OneToOne
+	@OneToOne(cascade=CascadeType.ALL)
 	private Category category;
 	public String description;
 	
